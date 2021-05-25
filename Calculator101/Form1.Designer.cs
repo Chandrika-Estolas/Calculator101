@@ -47,7 +47,7 @@
             this.Zero = new System.Windows.Forms.Button();
             this.Nine = new System.Windows.Forms.Button();
             this.AC = new System.Windows.Forms.Button();
-            this.Print = new System.Windows.Forms.TextBox();
+            this.Result_box = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Seven
@@ -60,6 +60,7 @@
             this.Seven.TabIndex = 0;
             this.Seven.Text = "7";
             this.Seven.UseVisualStyleBackColor = false;
+            this.Seven.Click += new System.EventHandler(this.Num_click);
             // 
             // Eight
             // 
@@ -71,6 +72,7 @@
             this.Eight.TabIndex = 1;
             this.Eight.Text = "8";
             this.Eight.UseVisualStyleBackColor = false;
+            this.Eight.Click += new System.EventHandler(this.Num_click);
             // 
             // DEL
             // 
@@ -93,6 +95,7 @@
             this.Divide.TabIndex = 4;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = false;
+            this.Divide.Click += new System.EventHandler(this.Operation_click);
             // 
             // Minus
             // 
@@ -104,6 +107,7 @@
             this.Minus.TabIndex = 9;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = false;
+            this.Minus.Click += new System.EventHandler(this.Operation_click);
             // 
             // Times
             // 
@@ -115,6 +119,7 @@
             this.Times.TabIndex = 8;
             this.Times.Text = "X";
             this.Times.UseVisualStyleBackColor = false;
+            this.Times.Click += new System.EventHandler(this.Operation_click);
             // 
             // Six
             // 
@@ -126,6 +131,7 @@
             this.Six.TabIndex = 7;
             this.Six.Text = "6";
             this.Six.UseVisualStyleBackColor = false;
+            this.Six.Click += new System.EventHandler(this.Num_click);
             // 
             // Five
             // 
@@ -137,6 +143,7 @@
             this.Five.TabIndex = 6;
             this.Five.Text = "5";
             this.Five.UseVisualStyleBackColor = false;
+            this.Five.Click += new System.EventHandler(this.Num_click);
             // 
             // Four
             // 
@@ -148,6 +155,7 @@
             this.Four.TabIndex = 5;
             this.Four.Text = "4";
             this.Four.UseVisualStyleBackColor = false;
+            this.Four.Click += new System.EventHandler(this.Num_click);
             // 
             // Plus
             // 
@@ -159,6 +167,7 @@
             this.Plus.TabIndex = 13;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = false;
+            this.Plus.Click += new System.EventHandler(this.Operation_click);
             // 
             // Three
             // 
@@ -170,6 +179,7 @@
             this.Three.TabIndex = 12;
             this.Three.Text = "3";
             this.Three.UseVisualStyleBackColor = false;
+            this.Three.Click += new System.EventHandler(this.Num_click);
             // 
             // Two
             // 
@@ -181,6 +191,7 @@
             this.Two.TabIndex = 11;
             this.Two.Text = "2";
             this.Two.UseVisualStyleBackColor = false;
+            this.Two.Click += new System.EventHandler(this.Num_click);
             // 
             // One
             // 
@@ -192,6 +203,7 @@
             this.One.TabIndex = 10;
             this.One.Text = "1";
             this.One.UseVisualStyleBackColor = false;
+            this.One.Click += new System.EventHandler(this.Num_click);
             // 
             // Equal
             // 
@@ -203,6 +215,7 @@
             this.Equal.TabIndex = 17;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = false;
+            this.Equal.Click += new System.EventHandler(this.Equal_click);
             // 
             // Period
             // 
@@ -214,6 +227,7 @@
             this.Period.TabIndex = 16;
             this.Period.Text = ".";
             this.Period.UseVisualStyleBackColor = false;
+            this.Period.Click += new System.EventHandler(this.Num_click);
             // 
             // Zero
             // 
@@ -225,6 +239,7 @@
             this.Zero.TabIndex = 15;
             this.Zero.Text = "0";
             this.Zero.UseVisualStyleBackColor = false;
+            this.Zero.Click += new System.EventHandler(this.Num_click);
             // 
             // Nine
             // 
@@ -236,6 +251,7 @@
             this.Nine.TabIndex = 20;
             this.Nine.Text = "9";
             this.Nine.UseVisualStyleBackColor = false;
+            this.Nine.Click += new System.EventHandler(this.Num_click);
             // 
             // AC
             // 
@@ -247,17 +263,18 @@
             this.AC.TabIndex = 21;
             this.AC.Text = "AC";
             this.AC.UseVisualStyleBackColor = false;
+            this.AC.Click += new System.EventHandler(this.AC_Click);
             // 
-            // Print
+            // Result_box
             // 
-            this.Print.BackColor = System.Drawing.Color.LavenderBlush;
-            this.Print.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.Print.Location = new System.Drawing.Point(13, 11);
-            this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(249, 45);
-            this.Print.TabIndex = 22;
-            this.Print.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Result_box.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Result_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Result_box.Font = new System.Drawing.Font("SimSun", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Result_box.Location = new System.Drawing.Point(13, 11);
+            this.Result_box.Name = "Result_box";
+            this.Result_box.Size = new System.Drawing.Size(249, 45);
+            this.Result_box.TabIndex = 22;
+            this.Result_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Calculator
             // 
@@ -265,7 +282,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Calculator101.Properties.Resources.sml;
             this.ClientSize = new System.Drawing.Size(276, 283);
-            this.Controls.Add(this.Print);
+            this.Controls.Add(this.Result_box);
             this.Controls.Add(this.AC);
             this.Controls.Add(this.Nine);
             this.Controls.Add(this.Equal);
@@ -284,7 +301,9 @@
             this.Controls.Add(this.DEL);
             this.Controls.Add(this.Eight);
             this.Controls.Add(this.Seven);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Calculator";
             this.Text = "BASIC CALCULATOR";
             this.ResumeLayout(false);
@@ -312,7 +331,7 @@
         private System.Windows.Forms.Button Zero;
         private System.Windows.Forms.Button Nine;
         private System.Windows.Forms.Button AC;
-        private System.Windows.Forms.TextBox Print;
+        private System.Windows.Forms.TextBox Result_box;
     }
 }
 
