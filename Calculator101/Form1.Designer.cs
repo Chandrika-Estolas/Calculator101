@@ -84,6 +84,7 @@
             this.DEL.TabIndex = 3;
             this.DEL.Text = "DEL";
             this.DEL.UseVisualStyleBackColor = false;
+            this.DEL.Click += new System.EventHandler(this.DEL_Click);
             // 
             // Divide
             // 
@@ -117,7 +118,7 @@
             this.Times.Name = "Times";
             this.Times.Size = new System.Drawing.Size(45, 47);
             this.Times.TabIndex = 8;
-            this.Times.Text = "X";
+            this.Times.Text = "x";
             this.Times.UseVisualStyleBackColor = false;
             this.Times.Click += new System.EventHandler(this.Operation_click);
             // 
@@ -215,7 +216,6 @@
             this.Equal.TabIndex = 17;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = false;
-            this.Equal.Click += new System.EventHandler(this.Equal_click);
             // 
             // Period
             // 
@@ -304,6 +304,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Calculator";
             this.Text = "BASIC CALCULATOR";
             this.ResumeLayout(false);
