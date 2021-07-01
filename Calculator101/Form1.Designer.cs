@@ -216,6 +216,7 @@
             this.Equal.TabIndex = 17;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = false;
+            this.Equal.Click += new System.EventHandler(this.Equal_Click);
             // 
             // Period
             // 
