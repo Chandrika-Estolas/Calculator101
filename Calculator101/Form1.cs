@@ -13,9 +13,11 @@ namespace Calculator101
     public partial class Calculator : Form
     {
 
-        String Operation_str = "";
-        float first, second;
-
+        string Operation_str;
+        string NumInput1;
+        string NumInput2;
+        string UserInput;
+        bool ISOperationPressed;
 
         public Calculator()
         {
@@ -24,19 +26,36 @@ namespace Calculator101
 
         private void Num_click(object sender, EventArgs e)
         {
+            {
+                if (ISOperationPressed)
+                {
+                    NumInput1 = UserInput;
+                    Result_box.Text = "";
+                }
+            }
             Button Num = (Button)sender;
+            UserInput = Num.Text;
             if (Result_box.Text != "0")
-                Result_box.Text = Result_box.Text + Num.Text;
+                Result_box.Text += Num.Text;
             else
                 Result_box.Text = "" + Num.Text;
+            ISOperationPressed = false;
         }
-
         private void Operation_click(object sender, EventArgs e)
-        { 
+        {
+            {
+                if (ISOperationPressed)
+                {
+                    NumInput1 = UserInput;
+                    Result_box.Text = "";
+                }
+            }
             Button Operation = (Button)sender;
-            first = float.Parse(Result_box.Text);
-            Operation_str = Operation.Text;
-            Result_box.Text = Result_box.Text + Operation_str;
+            Operation_str = (Operation.Text);
+            Result_box.Text += (Operation_str);
+            NumInput1 = UserInput;
+
+            ISOperationPressed = true;
         }
 
         private void AC_Click(object sender, EventArgs e)
@@ -60,28 +79,27 @@ namespace Calculator101
         private void Equal_Click(object sender, EventArgs e)
         {
             float Result = 0.0F;
-            (second) = float.Parse(Result_box.Text);
+            NumInput2 = UserInput;
+            float first, second;
+            first = float.Parse(NumInput1);
+            second = float.Parse(NumInput2);
+
             {
-                //multiply
                 if (Operation_str == "x")
-                   Result = (first) * (second);
+                    Result = (first) * (second);
                 Result_box.Text = string.Empty + Result.ToString();
-                //divide
                 if (Operation_str == "/")
-                        Result = (first) / (second);
-                    Result_box.Text = string.Empty + Result.ToString();
-                //plus
+                    Result = (first) / (second);
+                Result_box.Text = string.Empty + Result.ToString();
                 if (Operation_str == "+")
-                        Result = (first) + (second);
-                    Result_box.Text = string.Empty + Result.ToString();
-                //minus
+                    Result = (first) + (second);
+                Result_box.Text = string.Empty + Result.ToString();
                 if (Operation_str == "-")
-                        Result = (first) - (second);
-                    Result_box.Text = string.Empty + Result.ToString();
+                    Result = (first) - (second);
+                Result_box.Text = string.Empty + Result.ToString();
             }
         }
 
-
-        }
     }
+}
 
