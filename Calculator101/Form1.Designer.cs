@@ -48,13 +48,14 @@
             this.Nine = new System.Windows.Forms.Button();
             this.AC = new System.Windows.Forms.Button();
             this.Result_box = new System.Windows.Forms.TextBox();
+            this.Result_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Seven
             // 
             this.Seven.BackColor = System.Drawing.Color.Thistle;
             this.Seven.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seven.Location = new System.Drawing.Point(13, 62);
+            this.Seven.Location = new System.Drawing.Point(10, 81);
             this.Seven.Name = "Seven";
             this.Seven.Size = new System.Drawing.Size(45, 47);
             this.Seven.TabIndex = 0;
@@ -66,7 +67,7 @@
             // 
             this.Eight.BackColor = System.Drawing.Color.Thistle;
             this.Eight.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eight.Location = new System.Drawing.Point(64, 62);
+            this.Eight.Location = new System.Drawing.Point(61, 81);
             this.Eight.Name = "Eight";
             this.Eight.Size = new System.Drawing.Size(45, 47);
             this.Eight.TabIndex = 1;
@@ -78,7 +79,7 @@
             // 
             this.DEL.BackColor = System.Drawing.Color.PaleVioletRed;
             this.DEL.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DEL.Location = new System.Drawing.Point(166, 62);
+            this.DEL.Location = new System.Drawing.Point(163, 81);
             this.DEL.Name = "DEL";
             this.DEL.Size = new System.Drawing.Size(45, 47);
             this.DEL.TabIndex = 3;
@@ -90,7 +91,7 @@
             // 
             this.Divide.BackColor = System.Drawing.Color.Plum;
             this.Divide.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Divide.Location = new System.Drawing.Point(217, 115);
+            this.Divide.Location = new System.Drawing.Point(214, 134);
             this.Divide.Name = "Divide";
             this.Divide.Size = new System.Drawing.Size(45, 47);
             this.Divide.TabIndex = 4;
@@ -102,7 +103,7 @@
             // 
             this.Minus.BackColor = System.Drawing.Color.Plum;
             this.Minus.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minus.Location = new System.Drawing.Point(166, 168);
+            this.Minus.Location = new System.Drawing.Point(163, 187);
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(45, 47);
             this.Minus.TabIndex = 9;
@@ -114,7 +115,7 @@
             // 
             this.Times.BackColor = System.Drawing.Color.Plum;
             this.Times.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Times.Location = new System.Drawing.Point(166, 115);
+            this.Times.Location = new System.Drawing.Point(163, 134);
             this.Times.Name = "Times";
             this.Times.Size = new System.Drawing.Size(45, 47);
             this.Times.TabIndex = 8;
@@ -126,7 +127,7 @@
             // 
             this.Six.BackColor = System.Drawing.Color.Thistle;
             this.Six.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Six.Location = new System.Drawing.Point(115, 115);
+            this.Six.Location = new System.Drawing.Point(112, 134);
             this.Six.Name = "Six";
             this.Six.Size = new System.Drawing.Size(45, 47);
             this.Six.TabIndex = 7;
@@ -138,7 +139,7 @@
             // 
             this.Five.BackColor = System.Drawing.Color.Thistle;
             this.Five.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Five.Location = new System.Drawing.Point(64, 115);
+            this.Five.Location = new System.Drawing.Point(61, 134);
             this.Five.Name = "Five";
             this.Five.Size = new System.Drawing.Size(45, 47);
             this.Five.TabIndex = 6;
@@ -150,7 +151,7 @@
             // 
             this.Four.BackColor = System.Drawing.Color.Thistle;
             this.Four.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Four.Location = new System.Drawing.Point(13, 115);
+            this.Four.Location = new System.Drawing.Point(10, 134);
             this.Four.Name = "Four";
             this.Four.Size = new System.Drawing.Size(45, 47);
             this.Four.TabIndex = 5;
@@ -162,7 +163,7 @@
             // 
             this.Plus.BackColor = System.Drawing.Color.Plum;
             this.Plus.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Plus.Location = new System.Drawing.Point(217, 168);
+            this.Plus.Location = new System.Drawing.Point(214, 187);
             this.Plus.Name = "Plus";
             this.Plus.Size = new System.Drawing.Size(45, 100);
             this.Plus.TabIndex = 13;
@@ -174,7 +175,7 @@
             // 
             this.Three.BackColor = System.Drawing.Color.Thistle;
             this.Three.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Three.Location = new System.Drawing.Point(115, 168);
+            this.Three.Location = new System.Drawing.Point(112, 187);
             this.Three.Name = "Three";
             this.Three.Size = new System.Drawing.Size(45, 47);
             this.Three.TabIndex = 12;
@@ -186,7 +187,7 @@
             // 
             this.Two.BackColor = System.Drawing.Color.Thistle;
             this.Two.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Two.Location = new System.Drawing.Point(64, 168);
+            this.Two.Location = new System.Drawing.Point(61, 187);
             this.Two.Name = "Two";
             this.Two.Size = new System.Drawing.Size(45, 47);
             this.Two.TabIndex = 11;
@@ -198,7 +199,7 @@
             // 
             this.One.BackColor = System.Drawing.Color.Thistle;
             this.One.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.One.Location = new System.Drawing.Point(13, 168);
+            this.One.Location = new System.Drawing.Point(10, 187);
             this.One.Name = "One";
             this.One.Size = new System.Drawing.Size(45, 47);
             this.One.TabIndex = 10;
@@ -210,7 +211,7 @@
             // 
             this.Equal.BackColor = System.Drawing.Color.Plum;
             this.Equal.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equal.Location = new System.Drawing.Point(115, 221);
+            this.Equal.Location = new System.Drawing.Point(112, 240);
             this.Equal.Name = "Equal";
             this.Equal.Size = new System.Drawing.Size(96, 47);
             this.Equal.TabIndex = 17;
@@ -222,7 +223,7 @@
             // 
             this.Period.BackColor = System.Drawing.Color.Thistle;
             this.Period.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Period.Location = new System.Drawing.Point(64, 221);
+            this.Period.Location = new System.Drawing.Point(61, 240);
             this.Period.Name = "Period";
             this.Period.Size = new System.Drawing.Size(45, 47);
             this.Period.TabIndex = 16;
@@ -234,7 +235,7 @@
             // 
             this.Zero.BackColor = System.Drawing.Color.Thistle;
             this.Zero.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Zero.Location = new System.Drawing.Point(13, 221);
+            this.Zero.Location = new System.Drawing.Point(10, 240);
             this.Zero.Name = "Zero";
             this.Zero.Size = new System.Drawing.Size(45, 47);
             this.Zero.TabIndex = 15;
@@ -246,7 +247,7 @@
             // 
             this.Nine.BackColor = System.Drawing.Color.Thistle;
             this.Nine.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nine.Location = new System.Drawing.Point(115, 62);
+            this.Nine.Location = new System.Drawing.Point(112, 81);
             this.Nine.Name = "Nine";
             this.Nine.Size = new System.Drawing.Size(45, 47);
             this.Nine.TabIndex = 20;
@@ -258,7 +259,7 @@
             // 
             this.AC.BackColor = System.Drawing.Color.PaleVioletRed;
             this.AC.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AC.Location = new System.Drawing.Point(217, 62);
+            this.AC.Location = new System.Drawing.Point(214, 81);
             this.AC.Name = "AC";
             this.AC.Size = new System.Drawing.Size(45, 47);
             this.AC.TabIndex = 21;
@@ -277,12 +278,24 @@
             this.Result_box.TabIndex = 22;
             this.Result_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // Result_label
+            // 
+            this.Result_label.AutoSize = true;
+            this.Result_label.BackColor = System.Drawing.Color.Transparent;
+            this.Result_label.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Result_label.Location = new System.Drawing.Point(15, 59);
+            this.Result_label.Name = "Result_label";
+            this.Result_label.Size = new System.Drawing.Size(17, 16);
+            this.Result_label.TabIndex = 23;
+            this.Result_label.Text = "0";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Calculator101.Properties.Resources.sml;
-            this.ClientSize = new System.Drawing.Size(276, 283);
+            this.ClientSize = new System.Drawing.Size(270, 300);
+            this.Controls.Add(this.Result_label);
             this.Controls.Add(this.Result_box);
             this.Controls.Add(this.AC);
             this.Controls.Add(this.Nine);
@@ -334,6 +347,7 @@
         private System.Windows.Forms.Button Nine;
         private System.Windows.Forms.Button AC;
         private System.Windows.Forms.TextBox Result_box;
+        private System.Windows.Forms.Label Result_label;
     }
 }
 

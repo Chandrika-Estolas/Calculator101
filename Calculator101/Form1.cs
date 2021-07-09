@@ -15,9 +15,9 @@ namespace Calculator101
 
         string Operation_str;
         string NumInput1;
-        string NumInput2;
         string UserInput;
-        bool ISOperationPressed;
+        float second;
+        bool IsOperationPressed;
 
         public Calculator()
         {
@@ -27,24 +27,25 @@ namespace Calculator101
         private void Num_click(object sender, EventArgs e)
         {
             {
-                if (ISOperationPressed)
+                if (IsOperationPressed)
                 {
-                    NumInput1 = UserInput;
                     Result_box.Text = "";
                 }
             }
             Button Num = (Button)sender;
             UserInput = Num.Text;
             if (Result_box.Text != "0")
-                Result_box.Text += Num.Text;
+                Result_box.Text += UserInput;
             else
-                Result_box.Text = "" + Num.Text;
-            ISOperationPressed = false;
+                Result_box.Text = "" + UserInput;
+
+            NumInput1 = UserInput;
+            IsOperationPressed = false;
         }
         private void Operation_click(object sender, EventArgs e)
         {
             {
-                if (ISOperationPressed)
+                if (IsOperationPressed)
                 {
                     NumInput1 = UserInput;
                     Result_box.Text = "";
@@ -52,54 +53,67 @@ namespace Calculator101
             }
             Button Operation = (Button)sender;
             Operation_str = (Operation.Text);
-            Result_box.Text += (Operation_str);
-            NumInput1 = UserInput;
-
-            ISOperationPressed = true;
+            NumInput1 = Result_box.Text;
+            Result_box.Text += Operation_str;
+            Result_label.Text = NumInput1;
+            IsOperationPressed = true;
         }
 
         private void AC_Click(object sender, EventArgs e)
         {
             Result_box.Clear();
+            Result_label.Text = "0";
         }
 
         private void DEL_Click(object sender, EventArgs e)
         {
-            Button delete = (Button)sender;
             if (Result_box.Text != string.Empty)
             {
-                int Result_length = Result_box.Text.Length;
-                if (Result_length >= 1)
+                int Result_box_length = (Result_box.Text.Length);
+                if (Result_box_length >= 1)
                 {
-                    Result_box.Text = Result_box.Text.Remove(Result_length - 1);
+                    Result_box.Text = Result_box.Text.Remove(Result_box_length - 1);
                 }
             }
         }
 
         private void Equal_Click(object sender, EventArgs e)
         {
+            string NumInput2;
             float Result = 0.0F;
-            NumInput2 = UserInput;
-            float first, second;
-            first = float.Parse(NumInput1);
+            NumInput2 = Result_box.Text;
             second = float.Parse(NumInput2);
-
             {
                 if (Operation_str == "x")
-                    Result = (first) * (second);
+                    Result = float.Parse(Result_label.Text) * (second);
                 Result_box.Text = string.Empty + Result.ToString();
+
                 if (Operation_str == "/")
-                    Result = (first) / (second);
-                Result_box.Text = string.Empty + Result.ToString();
+                {
+                    if (second == 0)
+                    {
+                        Result_box.Text = "Undefined";
+                    }
+                    else
+                    { 
+                        Result = float.Parse(Result_label.Text) / (second);
+                        Result_box.Text = string.Empty + Result.ToString();
+                    }
+                }
+
                 if (Operation_str == "+")
-                    Result = (first) + (second);
+                    Result = float.Parse(Result_label.Text) + (second);
                 Result_box.Text = string.Empty + Result.ToString();
+
                 if (Operation_str == "-")
-                    Result = (first) - (second);
+                    Result = float.Parse(Result_label.Text) - (second);
                 Result_box.Text = string.Empty + Result.ToString();
             }
-        }
-
+            Result_label.Text = Convert.ToString(Result);
+            }
+        } 
     }
-}
+
+
+
 
